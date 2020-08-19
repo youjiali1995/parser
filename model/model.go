@@ -310,6 +310,10 @@ type TableInfo struct {
 
 	// TiFlashReplica means the TiFlash replica info.
 	TiFlashReplica *TiFlashReplicaInfo `json:"tiflash_replica"`
+
+	// Columnar means the table is column-oriented.
+	// It's true when the engine of the table is TiFlash.
+	Columnar bool `json:"Columnar"`
 }
 
 // TableLockInfo provides meta data describing a table lock.
